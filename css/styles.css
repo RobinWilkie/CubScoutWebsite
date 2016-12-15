@@ -1,0 +1,1019 @@
+@charset "utf-8";
+
+/* ---------- Stylesheet for Obanshire Cub Scouts website ---------- */
+
+html {
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+p {
+    font-family: 'Dosis', sans-serif;
+}
+
+
+/* ---------- Styles for header to be used across all pages ---------- */
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: -moz-linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, 124deg, color-stop(10%, 471059), color-stop(90%, 84A63E));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* IE10+ */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+    /* for IE */
+    background: linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* W3C */
+}
+
+#logo {
+    height: 9vh;
+    margin-left: 1vw;
+}
+
+
+/* ---------- Styles for navigation to be used across all pages ---------- */
+
+nav {
+    margin-right: 1vw;
+    font-family: 'Nunito', sans-serif;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 1s ease 0s, text-shadow 1s ease 0s;
+}
+
+nav a:hover {
+    color: #471059;
+    text-shadow: 0 0 9px #FFFFFF
+}
+
+
+/* ---------- Styles for footer to be used across all pages ---------- */
+
+footer {
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: -moz-linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, 124deg, color-stop(10%, 471059), color-stop(90%, 84A63E));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* IE10+ */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+    /* for IE */
+    background: linear-gradient(124deg, #471059 10%, #84A63E 90%);
+    /* W3C */
+}
+
+#Social {
+    height: 5vh;
+    margin-left: 1vw;
+}
+
+#Social img {
+    height: 5vh;
+    transition: all 0.2s ease 0s;
+}
+
+#Social img:hover {
+    transform: scale(0.9);
+}
+
+#Copyright {
+    color: #FFFFFF;
+    margin-right: 1vw;
+}
+
+
+/* ---------- Styles for Index page ---------- */
+
+#hero {
+    height: 30vh;
+    width: 100%;
+    background: url(../images/indexpage/CubsHero.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h1 {
+    color: #FFFFFF;
+    font-size: 3vw;
+}
+
+#hero span {
+    border: 2px solid #FFFFFF;
+    padding: 0 3vw 0 3vw;
+}
+
+#OptionBoxes {
+    height: 54vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#OptionBoxes a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 2vw;
+    transition: all 0.4s ease 0s;
+}
+
+#OptionBoxes:hover a {
+    opacity: 0.6;
+    transform: scale(0.92);
+    transition: all 0.4s ease 0s;
+}
+
+#OptionBoxes a:hover {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 10px #888888;
+    transition: all 0.4s ease 0s;
+}
+
+.optionEvents {
+    width: 30vw;
+    height: 22vh;
+    background: url(../images/indexpage/optionsEvents.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionGallery {
+    width: 30vw;
+    height: 22vh;
+    background: url(../images/indexpage/optionsGallery.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionBadges {
+    width: 30vw;
+    height: 22vh;
+    background: url(../images/indexpage/optionsBadges.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionGames {
+    width: 30vw;
+    height: 22vh;
+    background: url(../images/indexpage/optionsGames.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionParents {
+    width: 30vw;
+    height: 22vh;
+    background: url(../images/indexpage/optionsParents.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionLeaders {
+    width: 30vw;
+    height: 22vh;
+    background: url(../images/indexpage/optionsLeaders.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------- Styles for Events page ---------- */
+
+#eventsWrapper {
+    height: 78vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.eventBox {
+    background-color: grey;
+    width: 30vw;
+    height: 24vh;
+    display: block;
+    font-family: 'Dosis', sans-serif;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.eventBox.expanded {
+    height: auto;
+    z-index: 10000;
+}
+
+.eventDate {
+    margin: 1vw;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.eventName {
+    margin: 1vw;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.eventInfo {
+    margin: 0 2vw;
+}
+
+.eventButton {
+    border-radius: 50%;
+    background-color: #84A63E;
+    color: #471059;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    transition: all 0s ease-in-out 0s;
+}
+
+.eventButton:hover {
+    transform: scale(0.9);
+}
+
+
+/* ---------- Styles for Gallery page ---------- */
+
+.pageHeading {
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#galleryWrapper {
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 5vw 0 5vw;
+}
+
+#row1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#row2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#row3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#galleryWrapper img {
+    width: 10vw;
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+#galleryWrapper:hover img {
+    opacity: 0.6;
+    transform: scale(0.92);
+    transition: all 0.4s ease 0s;
+}
+
+#galleryWrapper img:hover {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s ease 0s;
+}
+
+
+/* ---------- Styles for Badges page ---------- */
+
+#badgesWrapper {
+    height: 78vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#badgesWrapper img {
+    width: 17vw;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#badgesWrapper img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.BadgeBoxWrap {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: none;
+}
+
+.close {
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.BadgeBox {
+    background-color: white;
+    text-align: center;
+    line-height: 0;
+    font-weight: normal;
+    padding: 4vh 4vw;
+    border: 1px solid #000000;
+}
+
+.BadgeBox h2 {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 5vh;
+}
+
+.BadgeBox img {
+    height: 27vh;
+}
+
+#printer {
+    margin-top: 5vh;
+    height: 8vh;
+}
+
+
+/* ---------- Styles for Games page ---------- */
+
+#gamesWrapper {
+    height: 78vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#hangman {
+    height: 70vh;
+    width: 45vw;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#match {
+    height: 70vh;
+    width: 45vw;
+    background-color: grey;
+}
+
+.wrapper {
+    width: 100%;
+    margin: -10px auto;
+    text-align: center;
+}
+
+.wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+canvas {
+    color: #000000;
+    border: #000000 dashed 2px;
+    padding: 15px;
+    margin-top: -15px;
+}
+
+#alphabet {
+    max-width: 900px;
+    margin: 0;
+}
+
+#alphabet:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#alphabet li {
+    float: left;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    width: 20px;
+    height: 17px;
+    padding: 5px;
+    background: #471059;
+    color: #fff;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border: none;
+    ;
+}
+
+#alphabet li:hover {
+    background: #84A63E;
+    color: #fff;
+}
+
+#my-word {
+    margin: 0;
+    display: block;
+}
+
+#my-word li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.6em;
+}
+
+.active {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -moz-transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    cursor: default;
+}
+
+.active:hover {
+    -moz-transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -moz-transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+#mylives {
+    font-size: 1.2em;
+    text-align: center;
+    display: block;
+}
+
+#stickman {
+    height: 10vh;
+}
+
+#reset {
+    border: 1px solid #471059;
+    border-radius: 4px;
+    background-color: #84A63E;
+    color: #471059;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-top: 5px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+#reset:hover {
+    border: 1px solid #84A63E;
+    background-color: #471059;
+    color: #84A63E;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ---------- Styles for Parents Option page ---------- */
+
+#parentsWrapper {
+    height: 78vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#parentsWrapper img {
+    height: 35vh;
+    margin-bottom: 10vh;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#parentsWrapper img:hover {
+    transform: scale(1.1);
+}
+
+#parentsWrapper a {
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#cubsInfoOption {
+    background: url(../images/parents/cubsinfoBlur.jpg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid #000000;
+    height: 70vh;
+    width: 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#helperOption {
+    background: url(../images/parents/helperBlur.jpg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid #000000;
+    height: 70vh;
+    width: 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#disclosureOption {
+    background: url(../images/parents/disclosureBlur.jpg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid #000000;
+    height: 70vh;
+    width: 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* ---------- Styles for Parents Cub Scouts Info page ---------- */
+
+#cubsInfoWrapper {
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cubsInfo {
+    width: 90vw;
+    height: 70vh;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+#info {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 5vw;
+}
+
+#info p {
+    font-size: 1.1vw;
+    margin-right: 5vw;
+}
+
+#info img {
+    width: 100%;
+}
+
+
+/* ---------- Styles for Parents Helper Registration page ---------- */
+
+#helperRegWrapper {
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background: url(../images/helperBack.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#helper {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2vh;
+    border: 3px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#helper a {
+    color: #FFFFFF;
+}
+
+#helper input {
+    margin: 0.2vh 0 1vh 0;
+}
+
+#helper input[type="time"] {
+    width: 30%;
+}
+
+#helperbutton {
+    border: 1px solid #471059;
+    border-radius: 4px;
+    background-color: #84A63E;
+    color: #471059;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.4s ease-in-out 0s;
+    width: 100%;
+    margin-top: 5px;
+}
+
+#helperbutton:hover {
+    border: 1px solid #84A63E;
+    background-color: #471059;
+    color: #84A63E;
+}
+
+
+/* ---------- Styles for Parents Disclosure page ---------- */
+
+#disclosureWrapper {
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+}
+
+#disclosureBox {
+    height: 75vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #FFFFFF;
+    justify-content: space-around;
+    align-items: center;
+    background: url(../images/disclosureBack.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#disclosureBox a {
+    color: #FFFFFF;
+}
+
+
+/* ---------- Styles for Leaders Login page ---------- */
+
+#loginWrapper {
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/leaderBack.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#leaderLogin {
+    height: 45vh;
+    width: 30vw;
+    border: 3px solid #FFFFFF;
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#leaderLogin {
+    color: #FFFFFF;
+}
+
+#login input {
+    display: block;
+    margin: 0.5vh 0 1vh 0;
+    padding: 0.5vh 0.5vw;
+}
+
+#login label {
+    color: #FFFFFF;
+}
+
+#loginButton {
+    border: 2px solid #471059;
+    border-radius: 4px;
+    background-color: #84A63E;
+    color: #471059;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+#loginButton:hover {
+    border: 2px solid #84A63E;
+    background-color: #471059;
+    color: #84A63E;
+}
+
+
+/* ---------- Styles for Leaders Options page ---------- */
+
+#leadersWrapper {
+    height: 78vh;
+    background: url() no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#leadersWrapper img {
+    height: 35vh;
+    margin-bottom: 10vh;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#leadersWrapper img:hover {
+    transform: scale(1.1);
+}
+
+#leadersWrapper a {
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#eventOption {
+    background: url(../images/leaders/eventsinfoblur.jpg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid #000000;
+    height: 70vh;
+    width: 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#helperInfoOption {
+    background: url(../images/leaders/helperinfoblur.jpg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid #000000;
+    height: 70vh;
+    width: 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#photoOption {
+    background: url(../images/leaders/photosblur.jpg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid #000000;
+    height: 70vh;
+    width: 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* ---------- Styles for Leaders Helper Info page ---------- */
+
+#helperInfoWrap {
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+table{
+    width: 90%;
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+th, tr, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#helperUpdate{
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+
+#helperUpdate button{
+    width: 150px;
+    border: 2px solid #471059;
+    border-radius: 4px;
+    background-color: #84A63E;
+    color: #471059;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin:  15px 10px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+#helperUpdate button:hover {
+    border: 2px solid #84A63E;
+    background-color: #471059;
+    color: #84A63E;
+}
+
+#helperUpdate img{
+    width: 15%;
+}
+
+#helperInfoWrap a{
+    font-family: 'Dosis', sans-serif;
+    color: #000000;
+    margin-top: 5px;
+}
+
+/* ---------- Styles for Leaders Event Info page ---------- */
+
+#leaderEventWrap {
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/eventsBack.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+#eventsBox {
+    border: 3px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#eventInfo {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    padding: 10px 20px;
+}
+
+#eventInfo textarea {
+    resize: none;
+    margin: 0 0 10px 0;
+}
+
+#eventInfo input[type="date"] {
+    width: 40%;
+}
+
+#eventadd {
+    width: 40%;
+    border: 2px solid #471059;
+    border-radius: 4px;
+    background-color: #84A63E;
+    color: #471059;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+#eventadd:hover {
+    border: 2px solid #84A63E;
+    background-color: #471059;
+    color: #84A63E;
+}
+
+#eventsBox a {
+    color: #fff;
+    padding-bottom: 5px;
+    font-family: 'Dosis', sans-serif;
+}
+
+
+/* ---------- Styles for Leaders Photo Upload page ---------- */
+
+#photoUploadWrap {
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#photoUploadWrap form {
+    width: 80vw;
+    height: 40vh;
+    border-radius: 4px;
+    border: 2px dashed #000000;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#upload {
+    width: 40%;
+    border: 2px solid #471059;
+    border-radius: 4px;
+    background-color: #84A63E;
+    color: #471059;
+    font-weight: bold;
+    padding: 10px 10px;
+    transition: all 0.4s ease-in-out 0s;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#upload:hover {
+    border: 2px solid #84A63E;
+    background-color: #471059;
+    color: #84A63E;
+}
+
+#photoUploadWrap img {
+    width: 50px;
+    cursor: pointer;
+}
+
+#photoUploadWrap a {
+    font-family: 'Dosis', sans-serif;
+    color: #000000;
+    margin-top: 5px;
+}

@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Obanshire Cub Scouts Games</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Nunito:700" rel="stylesheet">
+    <script src="javascript/functions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="images/logo/CubsLogo.png" alt="Logo for Obanshire Cub Scouts">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="badges.html">Badges</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="parents.html">Parents</a></li>
+                <li><a href="leaders.html">Leaders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="pageHeading">
+        <h1>GAMES</h1>
+    </div>
+
+    <div id="gamesWrapper">
+        <div id="hangman">
+            <h1>Hangman</h1>
+            <div class="wrapper">
+                <div id="buttons">
+                </div>
+                <div id="answer">
+                    <p id="catagoryName"></p>
+                    <div id="hold">
+                    </div>
+                </div>
+                <p id="mylives"></p>
+                <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+                <div class="container">
+                    <button id="reset">Play again</button>
+                </div>
+            </div>
+        </div>
+        <div id="match">
+            <iframe src="match/index.html" scrolling="no"></iframe>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div id="Social">
+            <a href="https://www.facebook.com/scouts.scotland/"><img src="images/social/facebook.png" alt="Facebook Logo"></a>
+            <a href="https://twitter.com/ScoutsScotland"><img src="images/social/twitter.png" alt="Twitter Logo"></a>
+            <a href="https://www.instagram.com/scoutswest/"><img src="images/social/instagram.png" alt="Instagram Logo"></a>
+        </div>
+
+        <div id="Copyright">
+            <p>&#169; Obanshire Cub Scouts</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function () {
+
+            var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+            var categories; // Array of topics
+            var chosenCategory; // Selected catagory
+            var getHint; // Word getHint
+            var word; // Selected word
+            var guess; // Geuss
+            var geusses = []; // Stored geusses
+            var lives; // Lives
+            var counter; // Count correct geusses
+            var space; // Number of spaces in word '-'
+
+            // Get elements
+            var showLives = document.getElementById("mylives");
+            var showCatagory = document.getElementById("scatagory");
+            var getHint = document.getElementById("hint");
+            var showClue = document.getElementById("clue");
+
+
+
+            // create alphabet ul
+            var buttons = function () {
+                myButtons = document.getElementById('buttons');
+                letters = document.createElement('ul');
+
+                for (var i = 0; i < alphabet.length; i++) {
+                    letters.id = 'alphabet';
+                    list = document.createElement('li');
+                    list.id = 'letter';
+                    list.innerHTML = alphabet[i];
+                    check();
+                    myButtons.appendChild(letters);
+                    letters.appendChild(list);
+                }
+            }
+
+
+            // Select Catagory
+            var selectCat = function () {
+                if (chosenCategory === categories[0]) {
+                    catagoryName.innerHTML = "Category Is Football Teams";
+                } else if (chosenCategory === categories[1]) {
+                    catagoryName.innerHTML = "Category Is Films";
+                } else if (chosenCategory === categories[2]) {
+                    catagoryName.innerHTML = "Category Is Cities";
+                }
+            }
+
+            // Create geusses ul
+            result = function () {
+                wordHolder = document.getElementById('hold');
+                correct = document.createElement('ul');
+
+                for (var i = 0; i < word.length; i++) {
+                    correct.setAttribute('id', 'my-word');
+                    guess = document.createElement('li');
+                    guess.setAttribute('class', 'guess');
+                    if (word[i] === "-") {
+                        guess.innerHTML = "-";
+                        space = 1;
+                    } else {
+                        guess.innerHTML = "_";
+                    }
+
+                    geusses.push(guess);
+                    wordHolder.appendChild(correct);
+                    correct.appendChild(guess);
+                }
+            }
+
+            // Show lives
+            comments = function () {
+                showLives.innerHTML = "You have " + lives + " lives";
+                if (lives < 1) {
+                    showLives.innerHTML = "Game Over";
+                }
+                for (var i = 0; i < geusses.length; i++) {
+                    if (counter + space === geusses.length) {
+                        showLives.innerHTML = "You Win!";
+                    }
+                }
+            }
+
+            // Animate man
+            var animate = function () {
+                var drawMe = lives;
+                drawArray[drawMe]();
+            }
+
+
+            // Hangman
+            canvas = function () {
+
+                myStickman = document.getElementById("stickman");
+                context = myStickman.getContext('2d');
+                context.beginPath();
+                context.strokeStyle = "#000000";
+                context.lineWidth = 2;
+            };
+
+            head = function () {
+                myStickman = document.getElementById("stickman");
+                context = myStickman.getContext('2d');
+                context.beginPath();
+                context.arc(60, 25, 10, 0, Math.PI * 2, true);
+                context.stroke();
+            }
+
+            draw = function ($pathFromx, $pathFromy, $pathTox, $pathToy) {
+
+                context.moveTo($pathFromx, $pathFromy);
+                context.lineTo($pathTox, $pathToy);
+                context.stroke();
+            }
+
+            frame1 = function () {
+                draw(0, 150, 150, 150);
+            };
+
+            frame2 = function () {
+                draw(10, 0, 10, 600);
+            };
+
+            frame3 = function () {
+                draw(0, 5, 70, 5);
+            };
+
+            frame4 = function () {
+                draw(60, 5, 60, 15);
+            };
+
+            torso = function () {
+                draw(60, 36, 60, 70);
+            };
+
+            rightArm = function () {
+                draw(60, 46, 100, 50);
+            };
+
+            leftArm = function () {
+                draw(60, 46, 20, 50);
+            };
+
+            rightLeg = function () {
+                draw(60, 70, 100, 100);
+            };
+
+            leftLeg = function () {
+                draw(60, 70, 20, 100);
+            };
+
+            drawArray = [rightLeg, leftLeg, rightArm, leftArm, torso, head, frame4, frame3, frame2, frame1];
+
+
+            // OnClick Function
+            check = function () {
+                list.onclick = function () {
+                    var geuss = (this.innerHTML);
+                    this.setAttribute("class", "active");
+                    this.onclick = null;
+                    for (var i = 0; i < word.length; i++) {
+                        if (word[i] === geuss) {
+                            geusses[i].innerHTML = geuss;
+                            counter += 1;
+                        }
+                    }
+                    var j = (word.indexOf(geuss));
+                    if (j === -1) {
+                        lives -= 1;
+                        comments();
+                        animate();
+                    } else {
+                        comments();
+                    }
+                }
+            }
+
+
+            // Play
+            play = function () {
+                categories = [
+        ["rangers", "celtic", "hearts", "aberdeen", "kilmarnock", "hibs", "motherwell"],
+        ["elf", "goosebumps", "tangled", "cars", "aladdin"],
+        ["glasgow", "edinburgh", "london", "paris", "aberdeen"]
+    ];
+
+                chosenCategory = categories[Math.floor(Math.random() * categories.length)];
+                word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
+                word = word.replace(/\s/g, "-");
+                console.log(word);
+                buttons();
+
+                geusses = [];
+                lives = 10;
+                counter = 0;
+                space = 0;
+                result();
+                comments();
+                selectCat();
+                canvas();
+            }
+
+            play();
+
+
+
+            // Reset
+
+            document.getElementById('reset').onclick = function () {
+                location.reload();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

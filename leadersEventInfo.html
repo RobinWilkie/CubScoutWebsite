@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Obanshire Cub Scouts Leaders Event Info</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Nunito:700" rel="stylesheet">
+    <script src="javascript/functions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="images/logo/CubsLogo.png" alt="Logo for Obanshire Cub Scouts">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="badges.html">Badges</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="parents.html">Parents</a></li>
+                <li><a href="leaders.html">Leaders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="pageHeading">
+        <h1>LEADERS AREA</h1>
+    </div>
+
+    <div id="leaderEventWrap">
+
+        <div id="eventsBox">
+            <h1>Event Info</h1>
+
+            <form id="eventInfo">
+                <label>Event Name</label>
+                <input type="text" name="eventname" required>
+                <label>Event Date</label>
+                <input type="date" name="eventdate" required>
+                <label>Event Info</label>
+                <textarea name="eventinfo" rows="10" cols="50" required></textarea>
+                <button id="eventadd" type="submit" onclick="eventAdd(this.form)">ADD</button>
+            </form>
+            <a href='leadersMenu.html'>Click here to return to the options page</a>
+        </div>
+    </div>
+
+    <footer>
+        <div id="Social">
+            <a href="https://www.facebook.com/scouts.scotland/"><img src="images/social/facebook.png" alt="Facebook Logo"></a>
+            <a href="https://twitter.com/ScoutsScotland"><img src="images/social/twitter.png" alt="Twitter Logo"></a>
+            <a href="https://www.instagram.com/scoutswest/"><img src="images/social/instagram.png" alt="Instagram Logo"></a>
+        </div>
+
+        <div id="Copyright">
+            <p>&#169; Obanshire Cub Scouts</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
